@@ -1,0 +1,32 @@
+body{
+    background: rgb(175,255,120);
+    background: linear-gradient(90deg, rgba(175,255,120,1) 0%, rgba(196,255,125,1) 100%);
+    width: 100%;
+    height: 740px;
+}
+
+h1{
+    text-align: center;
+}
+.jumbotron{
+    background: rgb(255, 255, 255);
+}
+
+.home{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.bordao{
+    font-size: 4px;
+}
+
+h5{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: -20px;
+}
+
+.p5{
+    padding-left: 20px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="img/sv_ico.ico" type="image/x-icon">
+
+    <title>Smart Vitality</title>
+</head>
+<body>
+<br><br><br><br>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Dados Clínicos</h1>
+        <br>
+        <form id="formulario">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="idade">Idade</label>
+                    <input type="number" class="form-control" id="idade" placeholder="Idade" required>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" class="form-control" required>
+                        <option value="" selected disabled>Escolher</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="altura">Altura (em metros)</label>
+                    <input type="number" class="form-control" id="altura" placeholder="Altura" required>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="peso">Peso (em kg)</label>
+                    <input type="number" class="form-control" id="peso" placeholder="Peso" required>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="salvarDados2()">Próximo</button>
+        </form>
+    </div>
+</div>
+</div>
+
+<script>
+function salvarDados2() {
+    var idade = document.getElementById('idade').value;
+    var sexo = document.getElementById('sexo').value;
+    var altura = document.getElementById('altura').value;
+    var peso = document.getElementById('peso').value;
+
+    // Validação dos campos
+    if (idade <= 0) {
+        alert("A idade deve ser um número positivo.");
+        return;
+    }
+
+    if (sexo === "") {
+        alert("Selecione o sexo.");
+        return;
+    }
+
+    if (altura <= 0) {
+        alert("A altura deve ser um número positivo.");
+        return;
+    }
+
+    if (peso <= 0) {
+        alert("O peso deve ser um número positivo.");
+        return;
+    }
+
+    // Armazena os dados em cookies
+    document.cookie = `idade=${idade}`;
+    document.cookie = `sexo=${sexo}`;
+    document.cookie = `altura=${altura}`;
+    document.cookie = `peso=${peso}`;
+
+    // Redireciona para outra página
+    window.location.href = 'anamnese.html';
+}
+</script>
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

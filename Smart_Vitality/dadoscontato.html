@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="img/sv_ico.ico" type="image/x-icon">
+
+    <title>Smart Vitality</title>
+</head>
+<body>
+<div class="container">
+    <br><br><br><br>
+    <div class="jumbotron">
+        <h1>Dados de Contato</h1>
+        <br>
+        <form id="formulario">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="usuario@email.com" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefone1">Telefone Primário</label>
+                    <input type="tel" class="form-control" id="telefone1" placeholder="+00 (00) 00000-0000" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefone2">Telefone Secundário</label>
+                    <input type="tel" class="form-control" id="telefone2" placeholder="+00 (00) 11111-1111">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua Topázio, nº 0" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Cotia" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="estado">Estado</label>
+                    <select id="estado" class="form-control" required>
+                        <option value="" selected disabled>Escolher</option>
+                        <option>SP</option>
+                        <option>RJ</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>SC</option>
+                        <option>DF</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Voltar</button>
+            <button type="button" class="btn btn-primary" onclick="salvarDados()">Próximo</button>
+        </form>
+    </div>
+</div>
+
+<script>
+// Função para salvar os dados em cookies
+function salvarDados() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var telefone1 = document.getElementById('telefone1').value;
+    var telefone2 = document.getElementById('telefone2').value;
+    var endereco = document.getElementById('endereco').value;
+    var cidade = document.getElementById('cidade').value;
+    var estado = document.getElementById('estado').value;
+
+    // Validação dos dados antes de salvar os cookies
+    if (nome && email && telefone1 && endereco && cidade && estado) {
+        // Cookies
+        document.cookie = `nome=${nome}`;
+        document.cookie = `email=${email}`;
+        document.cookie = `telefone1=${telefone1}`;
+        document.cookie = `telefone2=${telefone2}`;
+        document.cookie = `endereco=${endereco}`;
+        document.cookie = `cidade=${cidade}`;
+        document.cookie = `estado=${estado}`;
+
+        window.location.href = "dadosclinicos.html";
+    } else {
+        alert("Preencha todos os campos obrigatórios antes de continuar.");
+    }
+}
+</script>
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
