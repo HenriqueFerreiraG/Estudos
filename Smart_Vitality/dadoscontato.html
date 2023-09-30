@@ -22,15 +22,15 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome">
                 </div>
                 <div class="form-group col-md-12">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="usuario@email.com" required>
+                    <input type="email" class="form-control" id="email" placeholder="usuario@email.com">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telefone1">Telefone Primário</label>
-                    <input type="tel" class="form-control" id="telefone1" placeholder="+00 (00) 00000-0000" required>
+                    <input type="tel" class="form-control" id="telefone1" placeholder="+00 (00) 00000-0000">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telefone2">Telefone Secundário</label>
@@ -38,15 +38,15 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" placeholder="Rua Topázio, nº 0" required>
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua Topázio, nº 0">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cotia" required>
+                    <input type="text" class="form-control" id="cidade" placeholder="Cotia">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="estado">Estado</label>
-                    <select id="estado" class="form-control" required>
+                    <select id="estado" class="form-control">
                         <option value="" selected disabled>Escolher</option>
                         <option>SP</option>
                         <option>RJ</option>
@@ -66,41 +66,13 @@
                 </div>
             </div>
             <div class="form-group">
+            <button type="button" id="btnProximo" class="btn btn-primary">Próximo</button>
             </div>
-            <button type="submit" class="btn btn-primary">Voltar</button>
-            <button type="button" class="btn btn-primary" onclick="salvarDados()">Próximo</button>
         </form>
     </div>
 </div>
 
-<script>
-// Função para salvar os dados em cookies
-function salvarDados() {
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var telefone1 = document.getElementById('telefone1').value;
-    var telefone2 = document.getElementById('telefone2').value;
-    var endereco = document.getElementById('endereco').value;
-    var cidade = document.getElementById('cidade').value;
-    var estado = document.getElementById('estado').value;
-
-    // Validação dos dados antes de salvar os cookies
-    if (nome && email && telefone1 && endereco && cidade && estado) {
-        // Cookies
-        document.cookie = `nome=${nome}`;
-        document.cookie = `email=${email}`;
-        document.cookie = `telefone1=${telefone1}`;
-        document.cookie = `telefone2=${telefone2}`;
-        document.cookie = `endereco=${endereco}`;
-        document.cookie = `cidade=${cidade}`;
-        document.cookie = `estado=${estado}`;
-
-        window.location.href = "dadosclinicos.html";
-    } else {
-        alert("Preencha todos os campos obrigatórios antes de continuar.");
-    }
-}
-</script>
+<script src="dadoscontato.js"></script>
 
 <!-- JavaScript (Opcional) -->
 <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

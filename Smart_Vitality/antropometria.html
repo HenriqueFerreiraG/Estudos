@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="cadastro.css">
-    <link rel="stylesheet" href="contas.js">
     <link rel="shortcut icon" href="img/sv_ico.ico" type="image/x-icon">
 
     <title>Smart Vitality</title>
@@ -19,7 +18,7 @@
         <div class="jumbotron">
             <h1>Avaliação Antropométrica</h1>
             <br>
-            <form>
+            <form id="formulario4">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Medida da Cintura</label>
@@ -57,33 +56,38 @@
                 <div class="form-group">
                 </div>
                 <button type="submit" class="btn btn-primary"><a href="anamnese.html" style="color: #ffffff">Voltar</a></button>
-                <button type="submit" class="btn btn-primary"><a href="home.html" style="color: #ffffff">Próximo</a></button>
+                <button type="button" id="btnProximo3" class="btn btn-primary">Próximo</button>
+                <button type="button" class="btn btn-primary" id="butaoescondido" style="color: #ffffff" onclick="comomedir()" ondblclick="esconder()">Como medir?</button>
               </form>
+              <br>
+              <img src="" id="imagem" alt="">
         </div>
     </div>
     </div>
 
-    <script>
-      function salvarDados3() {
-            var cintura = document.getElementById('cintura').value;
-            var abdomen = document.getElementById('abdomen').value;
-            var torax = document.getElementById('torax').value;
-            var braco = document.getElementById('braco').value;
-            var antebraco = document.getElementById('antebraco').value;
-            var quadril = document.getElementById('quadril').value;
-            var coxa = document.getElementById('coxa').value;
-            var panturrilha = document.getElementById('panturrilha').value;
 
-            // Armazena os dados em cookies
-            document.cookie = `cintura=${cintura}`;
-            document.cookie = `abdomen=${abdomen}`;
-            document.cookie = `torax=${torax}`;
-            document.cookie = `braco=${braco}`;
-            document.cookie = `antebraco=${antebraco}`;
-            document.cookie = `quadril=${quadril}`;
-            document.cookie = `coxa=${coxa}`;
-            document.cookie = `panturrilhas=${panturrilha}`;
-        }
+    <script src="antropometria.js">
+/*==================== CMC COMO MEDIR? ======================*/
+
+      function comomedir(){
+
+          let imagem = document.getElementById('imagem');
+          imagem.src = "img/Smart_Vitality.png"
+          
+
+                         }
+
+/*==================== FIM COMO MEDIR? ======================*/
+
+/*==================== CMC ESCONDI ======================*/
+
+    function esconder(){
+
+      let butaoescondi = document.getElementById('butaoescondido')
+      imagem.src = ""
+
+    }
+
     </script>
 
     <!-- JavaScript (Opcional) -->

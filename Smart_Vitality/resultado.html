@@ -9,27 +9,139 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="cadastro.css">
     <link rel="shortcut icon" href="img/sv_ico.ico" type="image/x-icon">
-
     <title>Smart Vitality</title>
   </head>
   <body>
-      <br><br><br><br><br><br>
+      <br><br><br>
     <div class="container">
-        <div class="container">
-            <div class="jumbotron">
-                <div class="home">
-                  <h1>Formulário do Paciente</h1>
-                  
+        <div class="jumbotron">
+          <div class="home d-flex align-items-center">
+            <h1><img src="img/Smart_Vitality.png" width="160" height="140"></h1>
+            <h1 class="ml-4">Ficha do Paciente</h1>
+          </div>
+          <br>
+          <div class="resultado">
+            <div>
+              <label><h1 class="ml-4" style="font-size: 25px;"><strong>DADOS DE CONTATO</strong></h1></label>
+            </div>
+            <div>
+                <label><strong>Nome do paciente:</strong></label>
+                <u><span id="nome" style="font-size: 20px;"></span></u>
+                <label><strong>Email:</strong></label>
+                <u><span id="email" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>Telefone primário:</strong></label>
+              <u><span id="telefone1" style="font-size: 20px;"></span></u>
+              <label><strong>Telefone secundário:</strong></label>
+              <u><span id="telefone2" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>Estado:</strong></label>
+              <u><span id="estado" style="font-size: 20px;"></span></u>
+              <label><strong>Cidade:</strong></label>
+              <u><span id="cidade" style="font-size: 20px;"></span></u>
+              <label><strong>Endereço:</strong></label>
+              <u><span id="endereco" style="font-size: 20px;"></span></u>
+            </div>
+            <br><br>
+            <div>
+              <label><h1 class="ml-4" style="font-size: 25px;"><strong>DADOS CLÍNICOS</strong></h1></label>
+            </div>
+            <div>
+              <label><strong>Idade:</strong></label>
+              <u><span id="idade" style="font-size: 20px;"></span></u>
+              <label><strong>Sexo:</strong></label>
+              <u><span id="sexo" style="font-size: 20px;"></span></u>
+              <label><strong>Altura(m):</strong></label>
+              <u><span id="altura" style="font-size: 20px;"></span></u>
+              <label><strong>Peso(kg):</strong></label>
+              <u><span id="peso" style="font-size: 20px;"></span></u>
+              <label><strong>   </strong></label>
+              <u><span id="imc" style="font-size: 20px;"></span></u>
+            </div>
+            <br><br>
+            <div>
+              <label><h1 class="ml-4" style="font-size: 25px;"><strong>MEDIDAS ANTROPOMÉTRICAS</strong></h1></label>
+            </div>
+            <div>
+              <label><strong>Medida do Braço(cm):</strong></label>
+              <u><span id="braco" style="font-size: 20px;"></span></u>
+              <label><strong>Medida do Antebraço(cm):</strong></label>
+              <u><span id="antebraco" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>Medida do Tórax(cm):</strong></label>
+              <u><span id="torax" style="font-size: 20px;"></span></u>
+              <label><strong>Medida do Abdômen(cm):</strong></label>
+              <u><span id="abdomen" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>Medida da Cintura(cm):</strong></label>
+              <u><span id="cintura" style="font-size: 20px;"></span></u>
+              <label><strong>Medida do Quadril(cm):</strong></label>
+              <u><span id="quadril" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>Medida da Coxa(cm):</strong></label>
+              <u><span id="coxa" style="font-size: 20px;"></span></u>
+              <label><strong>Medida da Panturrilha(cm):</strong></label>
+              <u><span id="panturrilha" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>  </strong></label>
+              <u><span id="" style="font-size: 20px;"></span></u>
+            </div>
+            <br><br>
+            <div>
+                <label><h1 class="ml-4" style="font-size: 25px;"><strong>ANAMNESE</strong></h1></label>
+            </div>
+            <div>
+                <label><strong>1. Qual o seu objetivo em relação à alimentação:</strong></label>
+                <u><span id="p1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+                <label><strong>2. Você tem algum tipo de restrição alimentar:</strong></label>
+                <u><span id="p2s1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+                <label><strong>3. Como é sua rotina alimentar diária:</strong></label>
+                <u><span id="p3" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>4. Você consome bebidas alcoólicas:</strong></label>
+              <u><span id="p4s1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>5. Em média, qual é a sua ingestão de água diária:</strong></label>
+              <u><span id="p5" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+            <label><strong>6. Você pratica alguma atividade física regularmente:</strong></label>
+            <u><span id="p6s1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+            <label><strong>7. Você costuma fazer refeições fora de casa:</strong></label>
+            <u><span id="p7s1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+            <label><strong>8. Tem histórico familiar de doenças relacionadas à alimentação:</strong></label>
+            <u><span id="p8s1" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>9. Em média, quanto tempo você dorme por noite:</strong></label>
+              <u><span id="p9" style="font-size: 20px;"></span></u>
+            </div>
+            <div>
+              <label><strong>10. Costuma fazer lanches entre as refeições:</strong></label>
+              <u><span id="p10s1" style="font-size: 20px;"></span></u>
             </div>
         </div>
-        
-        <script>
-          function redirecionar(){
-            window.location.href = "dadoscontato.html";
-          }
-        </script>
+        </div>
+    </div>
 
-        <br><br><br><br>
+    <script src="resultado.js"></script>
+    <br><br><br><br>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

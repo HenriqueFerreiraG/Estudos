@@ -1,333 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="cadastro.css">
-    <link rel="stylesheet" href="contas.js">
     <link rel="shortcut icon" href="img/sv_ico.ico" type="image/x-icon">
 
     <title>Smart Vitality</title>
-  </head>
-  <body>
-    <br><br>
-    <div class="container"><br>
+</head>
+<body>
+    <div class="container mt-5">
         <div class="jumbotron">
             <h1>Anamnese</h1>
-            <br>
-            <form>
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">1. Qual o seu objetivo em relação à alimentação?</label>
-                    <input type="text" class="form-control" id="p1" placeholder="Perda de peso, ganho de massa muscular, manutenção, etc.">
-                  </div> <!--Pergunta 1-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">2. Você tem algum tipo restrição alimentar?</label>
-                    <div class="p5">
-                    <div class="form-row">
-                      <div class="form-check col-md-6">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="p2n" value="opcao1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                          Não
-                        </label>
-                      </div>
-                      <div class="form-check col-md-6">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="p2s" value="opcao2" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                          Sim
-                        </label>
-                      </div>
-                    </div>
-                    </div>
-                    <input type="text" class="form-control" id="p2s1" placeholder="Alergias, intolerâncias, etc.">
-                  </div> <!--Pergunta 2-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">3. Como é sua rotina alimentar diária?</label>
-                    <input type="text" class="form-control" id="p3" placeholder="Número de refeições, horários, tipos de alimentos consumidos, etc.">
-                  </div> <!--Pergunta 3-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">4. Você consome bêbidas alcoólicas?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p4n" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Não
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p4s" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Sim
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                    <input type="text" class="form-control" id="p4s1" placeholder="Se sim, com qual frequência?">
-                  </div> <!--Pergunta 4-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">5. Em média qual é a sua ingestão de água diária?</label>
-                    <div class="p5">
-                    <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p5m1l" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Menos de 1 litro
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p51l" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        1 litro
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p52l" value="opcao3" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        2 litros
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p53l" value="opcao4" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        3 litros
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p54l" value="opcao5" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        4 litros
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p5a4l" value="opcao6" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Acima de 4 litros
-                      </label>
-                    </div>
-                    </div>
-                  </div>
-                  </div> <!--Pergunta 5-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">6. Você pratica alguma atividade física regularmente?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p6n" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Não
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p6s" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Sim
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                    <input type="text" class="form-control" id="p6s1" placeholder="Se sim, com qual intensidade e frequência?">
-                  </div> <!--Pergunta 6-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">7. Você costuma fazer refeições fora de casa?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p7n" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Não
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p7s" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Sim
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                    <input type="text" class="form-control" id="ps71" placeholder="Se sim, com qual frequência?">
-                  </div> <!--Pergunta 7-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">8. Tem histórico familiar de doenças relacionadas à alimentação?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p8n" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Não
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p8s" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Sim
-                      </label>
-                    </div>
-                  </div>
-                    </div>
-                    <input type="text" class="form-control" id="p8s1" placeholder="Diabetes, hipertensão, ou doenças cardíacas.">
-                  </div> <!--Pergunta 8-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">9. Em média quanto tempo você dorme por noite?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p9m5" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Menos de 5 horas
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p95h" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        5 horas
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p96h" value="opcao3" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        6 horas
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p97h" value="opcao4" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        7 horas
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p98h" value="opcao5" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        8 horas
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p9a8h" value="opcao6" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Acima de 8 horas
-                      </label>
-                    </div>
-                  </div>
-                    </div>
-                  </div> <!--Pergunta 9-->
-                  <br>
-                  <div class="form-group col-md-12">
-                    <label for="inputEmail4">10. Costuma fazer lanches entre as refeições?</label>
-                    <div class="p5">
-                      <div class="form-row">
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p10n" value="opcao1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Não
-                      </label>
-                    </div>
-                    <div class="form-check col-md-6">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="p10s" value="opcao2" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                        Sim
-                      </label>
-                    </div>
-                  </div>
-                    </div>
-                    <input type="text" class="form-control" id="p10s1" placeholder="Se sim, quais são esses lanches?">
-                  </div> <!--Pergunta 10-->
-                </div>
+            <form id="formulario3">
+                <!-- Pergunta 1 -->
                 <div class="form-group">
+                    <label for="p1">1. Qual o seu objetivo em relação à alimentação?</label>
+                    <input type="text" class="form-control" id="p1" placeholder="Perda de peso, ganho de massa muscular, manutenção, etc.">
                 </div>
-                <button type="submit" class="btn btn-primary"><a href="cadastro.html" style="color: #ffffff">Voltar</a></button>
-                <button type="submit" class="btn btn-primary" value="salvar dados" onclick="salvarDados3()"><a href="antropometria.html" style="color: #ffffff">Próximo</a></button>
-              </form>
+
+                <!-- Pergunta 2 -->
+                <div class="form-group">
+                    <label>2. Você tem algum tipo de restrição alimentar?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p2" id="p2n" value="Não" checked>
+                        <label class="form-check-label" for="p2n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p2" id="p2s" value="Sim">
+                        <label class="form-check-label" for="p2s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p2s1" placeholder="Alergias, intolerâncias, etc." disabled>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="form-group">
+                    <label for="p3">3. Como é sua rotina alimentar diária?</label>
+                    <input type="text" class="form-control" id="p3" placeholder="Número de refeições, horários, tipos de alimentos consumidos, etc.">
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="form-group">
+                    <label>4. Você consome bebidas alcoólicas?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p4" id="p4n" value="Não" checked>
+                        <label class="form-check-label" for="p4n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p4" id="p4s" value="Sim">
+                        <label class="form-check-label" for="p4s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p4s1" placeholder="Se sim, com qual frequência?" disabled>
+                </div>
+
+                <!-- Pergunta 5 -->
+                <div class="form-group">
+                    <label for="p5">5. Em média, qual é a sua ingestão de água diária?</label>
+                    <select class="form-control" id="p5">
+                        <option value="Menos de 1 litro">Menos de 1 litro</option>
+                        <option value="1 litro">1 litro</option>
+                        <option value="2 litros">2 litros</option>
+                        <option value="3 litros">3 litros</option>
+                        <option value="4 litros">4 litros</option>
+                        <option value="Acima de 4 litros">Acima de 4 litros</option>
+                    </select>
+                </div>
+
+                <!-- Pergunta 6 -->
+                <div class="form-group">
+                    <label>6. Você pratica alguma atividade física regularmente?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p6" id="p6n" value="Não" checked>
+                        <label class="form-check-label" for="p6n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p6" id="p6s" value="Sim">
+                        <label class="form-check-label" for="p6s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p6s1" placeholder="Se sim, com qual intensidade e frequência?" disabled>
+                </div>
+
+                <!-- Pergunta 7 -->
+                <div class="form-group">
+                    <label>7. Você costuma fazer refeições fora de casa?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p7" id="p7n" value="Não" checked>
+                        <label class="form-check-label" for="p7n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p7" id="p7s" value="Sim">
+                        <label class="form-check-label" for="p7s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p7s1" placeholder="Se sim, com qual frequência?" disabled>
+                </div>
+
+                <!-- Pergunta 8 -->
+                <div class="form-group">
+                    <label>8. Tem histórico familiar de doenças relacionadas à alimentação?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p8" id="p8n" value="Não" checked>
+                        <label class="form-check-label" for="p8n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p8" id="p8s" value="Sim">
+                        <label class="form-check-label" for="p8s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p8s1" placeholder="Diabetes, hipertensão, ou doenças cardíacas." disabled>
+                </div>
+
+                <!-- Pergunta 9 -->
+                <div class="form-group">
+                    <label>9. Em média, quanto tempo você dorme por noite?</label>
+                    <select class="form-control" id="p9">
+                        <option value="Menos de 5 horas">Menos de 5 horas</option>
+                        <option value="5 horas">5 horas</option>
+                        <option value="6 horas">6 horas</option>
+                        <option value="7 horas">7 horas</option>
+                        <option value="8 horas">8 horas</option>
+                        <option value="Acima de 8 horas">Acima de 8 horas</option>
+                    </select>
+                </div>
+
+                <!-- Pergunta 10 -->
+                <div class="form-group">
+                    <label>10. Costuma fazer lanches entre as refeições?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p10" id="p10n" value="Não" checked>
+                        <label class="form-check-label" for="p10n">Não</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p10" id="p10s" value="Sim">
+                        <label class="form-check-label" for="p10s">Sim</label>
+                    </div>
+                    <input type="text" class="form-control" id="p10s1" placeholder="Se sim, quais são esses lanches?" disabled>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" btn class="btn btn-primary"> <a href="dadosclinicos.html" style="color: white;">Voltar</a></button>
+                    <button type="submit" class="btn btn-primary">Próximo</button>
+                </div>
+            </form>
         </div>
     </div>
-    </div>
-    <script>
-      function salvarDados3() {
-            var p1 = document.getElementById('p1').value;
-            var p2n = document.getElementById('p2n').value;
-            var p2s = document.getElementById('p2s').value;
-            var p2s1 = document.getElementById('p2s1').value;
-            var p3 = document.getElementById('p3').value;
-            var p4n = document.getElementById('p4n').value;
-            var p4s = document.getElementById('p4s').value;
-            var p4s1 = document.getElementById('p4s1').value;
-            var p5m1l = document.getElementById('p5m1l').value;
-            var p51l = document.getElementById('p51l').value;
-            var p52l = document.getElementById('p52l').value;
-            var p53l = document.getElementById('p53l').value;
-            var p54l = document.getElementById('p54l').value;
-            var p5a4l = document.getElementById('p5a4l').value;
-            var p6n = document.getElementById('p6n').value;
-            var p6s = document.getElementById('p6s').value;
-            var p6s1 = document.getElementById('p6s1').value;
-            var p7n = document.getElementById('p7n').value;
-            var p7s = document.getElementById('p7s').value;
-            var p7s1 = document.getElementById('p7s1').value;
-            var p8n = document.getElementById('p8n').value;
-            var p8s = document.getElementById('p8s').value;
-            var p8s1 = document.getElementById('p8s1').value;
-            var p9m5 = document.getElementById('p9m5').value;
-            var p95h = document.getElementById('p95h').value;
-            var p96h = document.getElementById('p96h').value;
-            var p97h = document.getElementById('p97h').value;
-            var p98h = document.getElementById('p98h').value;
-            var p9a8h = document.getElementById('p9a8h').value;
-            var p10n = document.getElementById('p10n').value;
-            var p10s = document.getElementById('p10s').value;
-            var p10s1 = document.getElementById('p10s1').value;
 
-            // Armazena os dados em cookies
-            document.cookie = `p1=${p1}`;
-            document.cookie = `p2n=${p2n}`;
-            document.cookie = `p2s=${p2s}`;
-            document.cookie = `p2s1=${p2s1}`;
-            document.cookie = `p3=${p3}`;
-            document.cookie = `p4n=${p4n}`;
-            document.cookie = `p4s=${p4s}`;
-            document.cookie = `p4s1=${p4s1}`;
-            document.cookie = `p5m1l=${p5m1l}`;
-            document.cookie = `p51l=${p51l}`;
-            document.cookie = `p52l=${p52l}`;
-            document.cookie = `p53l=${p53l}`;
-            document.cookie = `p54l=${p54l}`;
-            document.cookie = `p5a4l=${p5a4l}`;
-            document.cookie = `p6n=${p6n}`;
-            document.cookie = `p6s=${p6s}`;
-            document.cookie = `p6s1=${p6s1}`;
-            document.cookie = `p7n=${p7n}`;
-            document.cookie = `p7s=${p7s}`;
-            document.cookie = `p7s1=${p7s1}`;
-            document.cookie = `p8n=${p8n}`;
-            document.cookie = `p8s=${p8s}`;
-            document.cookie = `p8s1=${p8s1}`;
-            document.cookie = `p9m5=${p9m5}`;
-            document.cookie = `p95h=${p95h}`;
-            document.cookie = `p96h=${p96h}`;
-            document.cookie = `p97h=${p97h}`;
-            document.cookie = `p98h=${p98h}`;
-            document.cookie = `p9a8h=${p9a8h}`;
-            document.cookie = `p10n=${p10n}`;
-            document.cookie = `p10s=${p10s}`;
-            document.cookie = `p10s1=${p10s1}`;
-        }
-    </script>
-    <br><br>
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+
+    <script>
+        function toggleInputState(inputId, radioYesId, radioNoId) {
+            const input = document.getElementById(inputId);
+            const radioYes = document.getElementById(radioYesId);
+            const radioNo = document.getElementById(radioNoId);
+
+            input.disabled = !radioYes.checked;
+        }
+
+        const toggleElements = [
+            { radioYesId: 'p2s', radioNoId: 'p2n', inputId: 'p2s1' },
+            { radioYesId: 'p4s', radioNoId: 'p4n', inputId: 'p4s1' },
+            { radioYesId: 'p6s', radioNoId: 'p6n', inputId: 'p6s1' },
+            { radioYesId: 'p7s', radioNoId: 'p7n', inputId: 'p7s1' },
+            { radioYesId: 'p8s', radioNoId: 'p8n', inputId: 'p8s1' },
+            { radioYesId: 'p10s', radioNoId: 'p10n', inputId: 'p10s1' }
+        ];
+
+        toggleElements.forEach(({ radioYesId, radioNoId, inputId }) => {
+            const radioYes = document.getElementById(radioYesId);
+            const radioNo = document.getElementById(radioNoId);
+
+            radioYes.addEventListener('change', () => {
+                toggleInputState(inputId, radioYesId, radioNoId);
+            });
+
+            radioNo.addEventListener('change', () => {
+                toggleInputState(inputId, radioYesId, radioNoId);
+            });
+        });
+    </script>
+</body>
 </html>
